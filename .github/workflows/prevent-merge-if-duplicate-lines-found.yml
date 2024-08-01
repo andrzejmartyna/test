@@ -19,10 +19,6 @@ jobs:
           python -m pip install --upgrade pip
           # Add any necessary dependencies here
       
-      - name: Check what we have
-        run: |
-          ls -R -a
-
       - name: Check for duplicate lines
         run: |
           python .actions_code/check_duplicates.py
