@@ -1,4 +1,4 @@
-# generated using phind.com
+# initial version generated using phind.com
 
 import os
 
@@ -9,8 +9,14 @@ def find_duplicates(directory):
     """
     duplicates_found = False
     
+    print(f"Checking: '{directory}' ...")
+    
     for root, dirs, files in os.walk(directory):
         for file in files:
+            if not file.lower().endswith(".txt"):
+                # print(f"Skipped: '{file}'")
+                continue
+
             filepath = os.path.join(root, file)
             try:
                 with open(filepath, 'r', encoding='utf-8') as f:

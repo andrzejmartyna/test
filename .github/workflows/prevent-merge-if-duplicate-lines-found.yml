@@ -1,4 +1,4 @@
-name: Check for Duplicate Lines
+name: Check for Duplicate Lines in TXT files
 
 on: pull_request
 
@@ -21,4 +21,4 @@ jobs:
       
       - name: Check for duplicate lines
         run: |
-          .action_code/python check_duplicates.py
+          python .actions_code/check_duplicates.py
