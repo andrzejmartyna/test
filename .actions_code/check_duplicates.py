@@ -11,6 +11,10 @@ def find_duplicates(directory):
     
     for root, dirs, files in os.walk(directory):
         for file in files:
+            if file.startswith("."):
+                print(f"Skipped: '{file}'")
+                continue
+
             filepath = os.path.join(root, file)
             try:
                 with open(filepath, 'r', encoding='utf-8') as f:
