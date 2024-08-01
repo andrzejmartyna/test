@@ -11,6 +11,7 @@ def find_duplicates(directory):
     
     for root, dirs, files in os.walk(directory):
         for file in files:
+            print(f"Checking: '{file}'...")
             if file.startswith("."):
                 print(f"Skipped: '{file}'")
                 continue
