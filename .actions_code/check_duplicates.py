@@ -13,8 +13,8 @@ def find_duplicates(directory):
     
     for root, dirs, files in os.walk(directory):
         for file in files:
-            if not file.endswith(".txt"):
-                print(f"Skipped: '{file}'")
+            if not file.lower().endswith(".txt"):
+                # print(f"Skipped: '{file}'")
                 continue
 
             filepath = os.path.join(root, file)

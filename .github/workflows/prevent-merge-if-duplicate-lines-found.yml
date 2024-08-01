@@ -1,4 +1,4 @@
-name: Check for Duplicate Lines
+name: Check for Duplicate Lines in TXT files
 
 on: pull_request
 
