@@ -1,4 +1,4 @@
-# generated using phind.com
+# initial version generated using phind.com
 
 import os
 
@@ -9,10 +9,11 @@ def find_duplicates(directory):
     """
     duplicates_found = False
     
+    print(f"Checking: '{directory}' ...")
+    
     for root, dirs, files in os.walk(directory):
         for file in files:
-            print(f"Checking: '{root} ----- {file}'...")
-            if file.startswith("."):
+            if not file.endswith(".txt"):
                 print(f"Skipped: '{file}'")
                 continue
 
