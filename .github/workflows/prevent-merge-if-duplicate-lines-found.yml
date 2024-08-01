@@ -21,4 +21,4 @@ jobs:
       
       - name: Check for duplicate lines
         run: |
-          python .actions_code/check_duplicates.py
+          python .github/checks/check_duplicates.py
